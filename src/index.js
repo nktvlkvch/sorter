@@ -40,6 +40,11 @@ class Sorter {
     }
     secondArr.sort(this.compareFunction);
 
+    indices.sort(function(a,b){return a -b});
+    for (i=0; i<indices.length; i++){
+      this.arr[indices[i]] = secondArr[i];
+    }
+
   }
 
   setComparator(compareFunction) {
