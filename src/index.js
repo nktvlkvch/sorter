@@ -33,11 +33,18 @@ class Sorter {
 
   sort(indices) {
     // your implementation
+    var i = 0;
+    var secondArr = [];
+    for(i = 0; i < indices.length; i++){
+      secondArr.push(this.arr[indices[i]]);
+    }
+    secondArr.sort(this.compareFunction);
 
   }
 
   setComparator(compareFunction) {
     // your implementation
+    this.compareFunction = compareFunction;
   }
 }
 
